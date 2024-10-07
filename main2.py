@@ -45,7 +45,7 @@ def move_bullet(bullet, x, y, angle):
     # Проверка попадания пули в квадраты
     if check_collision(x, y):
         canvas.delete(bullet)
-    elif 0 < x < 500 and 0 < y < 500:
+    elif 0 < x < 500 and 0 < y < 600:
         root.after(50, move_bullet, bullet, x, y, angle)
     else:
         canvas.delete(bullet)
