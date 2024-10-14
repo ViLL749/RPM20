@@ -28,6 +28,7 @@
 from tkinter import *
 import random
 import math
+import simpleaudio as sa
 
 
 # Поворот пушки
@@ -59,8 +60,13 @@ def fire_bullet():
     x1 = x0 + length * math.cos(math.radians(gun_angle))
     y1 = y0 - length * math.sin(math.radians(gun_angle))
     bullet = canvas.create_oval(x1 - 5, y1 - 5, x1 + 5, y1 + 5, fill="yellow", tags="bullet")
+    play_sound("tankovyiy-vyistrel.wav")
     move_bullet(bullet, x1, y1, gun_angle)
 
+
+def play_sound(filename):
+    track = sa.WaveObject.from_wave_file(filename)
+    track.play()
 
 # Перемещение пули
 def move_bullet(bullet, x, y, angle):
@@ -120,6 +126,9 @@ def check_answer(index):
     if square_answers[index] == correct_answer:
         score += 1
         score_label.config(text=f"Score: {score}")
+        play_sound("inecraft_levelu.wav")
+    else:
+        play_sound("inecraft_death.wav")
     update_question()
 
 
@@ -167,6 +176,7 @@ for i in range(3):
 update_question()
 
 root.mainloop()
+
 
 ```
 
