@@ -41,6 +41,7 @@ def play_sound(filename):
     track = sa.WaveObject.from_wave_file(filename)
     track.play()
 
+
 # Перемещение пули
 def move_bullet(bullet, x, y, angle):
     speed = 10
@@ -66,7 +67,6 @@ def check_collision(bullet_x, bullet_y):
             return True
         i += 1
     return False
-
 
 
 # Обновление вопроса
