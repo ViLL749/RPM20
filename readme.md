@@ -17,9 +17,7 @@
 ##### Системный анализ: #####
 
 > Входные данные: `None`  
-> Промежуточные
->
-данные: `root`, `canvas`, `int gun_angle`, `int length`, `int x0`, `int y0`, `int x1`, `int y1`, `int speed`, `int score`, `list square_coords`, `list square_answers`, `list square_texts`
+> Промежуточные данные: `root`, `canvas`, `int gun_angle`, `int length`, `int x0`, `int y0`, `int x1`, `int y1`, `int speed`, `int score`, `list square_coords`, `list square_answers`, `list square_texts`
 > Выходные данные: `canvas`, `int score`
 
 ##### Блок схема: #####
